@@ -12,13 +12,13 @@ export default function Hero() {
       id="top"
       className="bg-ink w-full px-4 md:px-6 pt-6 pb-12"
     >
-      <Card className="w-full h-[80vh] min-h-[520px] bg-black/[0.96] relative overflow-hidden border-white/10 rounded-none md:rounded-lg">
+      <Card className="w-full md:h-[80vh] md:min-h-[520px] bg-black/[0.96] relative overflow-hidden border-white/10 rounded-none md:rounded-lg">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
         />
 
-        <div className="flex flex-col md:flex-row h-full">
+        <div className="flex flex-col md:flex-row md:h-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,11 +56,13 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <div className="flex-1 relative min-h-[260px] md:min-h-0">
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
-            />
+          <div className="flex-1 relative w-full h-[60vh] min-h-[380px] max-h-[600px] md:h-auto md:min-h-0 md:max-h-none overflow-hidden">
+            <div className="absolute inset-y-0 -left-1/4 -right-1/4 md:inset-0">
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="!w-full !h-full"
+              />
+            </div>
           </div>
         </div>
       </Card>
